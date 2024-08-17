@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(243, 228, 23);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cc0000' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23aa0000' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6002b' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23b10022' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9004b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b2003d' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d3006c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ac0057' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c4008c' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%239e0071' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa00aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23880088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    /* background-size: cover; */
+}
+
+.welcome_text{
+    width: 500px;
+}
+
+@media only screen and (max-width: 700px) {
+    .welcome_text {
+      width: 350px;
+    }
+}
+
+.welcome_form input, .welcome_form button {
+    display: block;
+    width: 100%;
+}
+
+.welcome_form input {
+    background-color: transparent;
+    color: rgb(15, 15, 14);
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    font-family: monospace;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.welcome_form input:focus {
+    outline: none;
+    background-color: transparent;
+}
+.welcome_form button {
+    padding: 15px 0;
+    border: none;
+    border-radius: 100px;
+    background-color: rgb(192, 68, 19);
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.4s all;
+}
+
+.welcome_form button:hover {
+    box-shadow: 0px 0px 15px 1px rgba(2, 2, 2, 0.726);
+    cursor: pointer;
+}
+
+
+.quizDisplay {
+    display: grid;
+    grid-template-rows: 50px auto;
+    text-align: center;
+    width: 800px;
+    height: 500px;
+    background-color: black;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .quizHeader {
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(199, 243, 118);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .quizBody {
+    padding: 25px 20px;
+  }
+  
+  .quizPlayer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 25px;
+    font-family: monospace;
+  }
+  
+  .quizBody {
+    background-color: #82a1a8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .option_group {
+    list-style-type: none;
+    margin: 30px 0;
+  }
+  
+  .option {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: 0.9s all;
+    font-size: 20px;
+  }
+  
+  .option:hover {
+    cursor: pointer;
+    padding: 17px 0px;
+    background-color: rgb(41, 197, 224);
+    color: red;
+  }
+  
+  .option.active {
+    background-color: rgb(225, 250, 200);
+    color: black;
+  }
+  
+  .btn-next {
+    border: none;
+    padding: 15px 35px;
+    background-color: rgb(220, 240, 149);
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.4s all;
+    font-size: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
+  }
+  
+  .btn-next:hover {
+    cursor: pointer;
+    background-color: rgb(44, 124, 216);
+    color: black;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* =========================================================== */
+  
+  .award_icon {
+    display: block;
+    font-size: 350px;
+    color: rgb(11, 141, 247);
+  }
+  
+  .username, .userpoints, .usertime {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .username span {
+    color: yellow;
+  }
+  
+  .userpoints span {
+    color: yellow;
+    font-weight: bold;
+  }
